@@ -60,10 +60,7 @@ class AuthController extends Controller
         ]);
 
         if (auth()->attempt(['username' => $request->username, 'email' => $request->email, 'password' => $request->password])) {
-            if (Auth::user()->role === 'admin'){
-                return redirect()->route('home_admin')->with('success', 'Login successful');
-            }
-            return redirect()->route('home')->with('success', 'You are now logged in.');
+            return redirect()->route('home_admin')->with('success', 'You are now logged in.');
         }
 
         return redirect()->back()->withErrors(['email' => 'Inncorrect credencials.']);

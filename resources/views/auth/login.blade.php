@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app_not_logged')
 
 @section('title','Autoleben | Login')
 

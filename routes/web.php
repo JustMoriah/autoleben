@@ -18,14 +18,13 @@ Route::get('/', function () {
 Route::middleware([isLoggedIn::class])->group(function(){
     Route::get('/user',[UserController::class, 'index']);
     Route::get('/user_address',[UserAddressController::class, 'index']);
-    Route::get('/car_sell',[CarSell::class, 'index']);
-    Route::get('/car_rent',[CarRent::class, 'index']);
     Route::get('/home_admin', function() {
-        return view('auth.home_admin');
+        return view('home_admin');
     })->name('home_admin');
 });
 
 //Rental car routes
+Route::get('/car_rent',[CarRentController::class, 'index']);
 Route::get('/car_rent/create',[CarRentController::class,'create']);
 Route::get('/car_rent/{car_rent}',[CarRentController::class,'show']);
 Route::post('/car_rent',[CarRentController::class,'store']);
@@ -33,6 +32,7 @@ Route::get('/car_rent/{car_rent}/edit',[CarRentController::class,'edit']);
 Route::put('/car_rent/{car_rent}',[CarRentController::class,'update']);
 Route::delete('/car_rent/{car_rent}',[CarRentController::class,'destroy']);
 //For sale car routes
+Route::get('/car_sell',[CarSellController::class, 'index']);
 Route::get('/car_sell/create',[CarSellController::class,'create']);
 Route::get('/car_sell/{car_sell}',[CarSellController::class,'show']);
 Route::post('/car_sell',[CarSellController::class,'store']);
@@ -60,9 +60,9 @@ Route::get('register', [AuthController::class, 'showRegisterForm'])->name('regis
 Route::post('register', [AuthController::class, 'register']);
 Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('login', [AuthController::class, 'login']);
-Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 //Home route
 Route::get('/home', function() {
-    return view('auth.home');
+    return view('home');
 })->name('home');
