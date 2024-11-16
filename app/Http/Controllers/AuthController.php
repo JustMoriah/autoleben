@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AuthController extends Controller
 {
@@ -42,8 +43,8 @@ class AuthController extends Controller
             'telephone' => $request->telephone,
             'license_number' => $request->license_number,
         ]);
-
-        return redirect()->route('login')->with('success', 'User has been registered succesfully!.');
+        Alert::success('User registered!','A new user has been created successfully!')->flash();
+        return redirect()->route('login');
     }
 
     public function showLoginForm()
@@ -60,7 +61,8 @@ class AuthController extends Controller
         ]);
 
         if (auth()->attempt(['username' => $request->username, 'email' => $request->email, 'password' => $request->password])) {
-            return redirect()->route('home_admin')->with('success', 'You are now logged in.');
+            Alert::success('Logged In!','You have logged in successfully!')->flash();
+            return redirect()->route('home_admin');
         }
 
         return redirect()->back()->withErrors(['email' => 'Inncorrect credencials.']);
@@ -69,6 +71,7 @@ class AuthController extends Controller
     public function logout()
     {
         auth()->logout();
-        return redirect()->route('login')->with('success', 'You are now logged out.');
+        Alert::success('Logged Out','You have been logged out.')->flash();
+        return redirect()->route('login');
     }
 }
