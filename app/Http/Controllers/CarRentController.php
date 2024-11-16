@@ -37,6 +37,7 @@ class CarRentController extends Controller
         $car_rent->color = $request->color;
         $car_rent->status = $request->status;
         $car_rent->price = $request->price;
+        $car_rent->id_user_1 = $request->id_user_1;
         $car_rent->save();
         Alert::success('Rental car saved!','Car for rent has been created successfully!')->flash();
         return redirect('/car_rent');
@@ -72,7 +73,7 @@ class CarRentController extends Controller
         $car_rent->color = $request->color;
         $car_rent->status = $request->status;
         $car_rent->price = $request->price;
-
+        $car_rent->id_user_1 = $request->id_user_1;
         $car_rent->save();
         Alert::success('Rental car edited!','The information of the rental car has been modified.')->flash();
         return redirect("/car_rent/{$car_rent->id}");

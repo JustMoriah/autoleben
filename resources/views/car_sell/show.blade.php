@@ -18,6 +18,7 @@ Car #{{$car_sell->id}}
         <li><strong>Color: </strong>{{$car_sell->birthdate}}</li>
         <li><strong>Stock: </strong>{{$car_sell->stock}}</li>
         <li><strong>Price: </strong>${{$car_sell->price}}</li>
+        <li><strong>User ID: </strong>${{$car_sell->id_user_1}}</li>
     </ul>
     <br>
     <a href="/car_sell">Return to index</a>

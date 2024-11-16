@@ -38,6 +38,11 @@
             <input type="decimal" name="price" required>
         </label>
         <br><br>
+        <label>
+            User ID:
+            <input type="number" name="id_user_1" required>
+        </label>
+        <br><br>
         <button type="submit" class="btn btn-success">
             Create
         </button><br><br>

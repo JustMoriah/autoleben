@@ -36,6 +36,7 @@ class CarSellController extends Controller
         $car_sell->color = $request->color;
         $car_sell->stock = $request->stock;
         $car_sell->price = $request->price;
+        $car_sell->id_user_1 = $request->id_user_1;
         $car_sell->save();
         Alert::success('Car saved!','Car for sell has been created successfully!');
         return redirect('/car_sell');

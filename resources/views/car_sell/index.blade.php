@@ -16,6 +16,7 @@
         <th>Color</th>
         <th>Stock</th>
         <th>Price</th>
+        <th>User ID</th>
         <th>Show</th>
         <th>Edit</th>
         <th>Delete</th>
@@ -41,6 +42,9 @@
                 </td>
                 <td>
                     <h3>{{$car_sell->price}}</h3>
+                </td>
+                <td>
+                    <h3>{{$car_sell->id_user_1}}</h3>
                 </td>
                 <td>
                     <button class="btn btn-primary"><a href="/car_sell/{{$car_sell->id}}" style="color: white; text-decoration:none">Show</a></button>

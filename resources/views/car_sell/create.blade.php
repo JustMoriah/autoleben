@@ -10,33 +10,38 @@
         @csrf
         <label>
             Brand:
-            <input type="text" name="brand">
+            <input type="text" name="brand" required>
         </label>
         <br><br>
         <label>
             Model:
-            <input type="text" name="model">
+            <input type="text" name="model" required>
         </label>
         <br><br>
         <label>
             Color:
-            <input type="text" name="color">
+            <input type="text" name="color" required>
         </label>
         <br><br>
         <label>
             Stock:
-            <input type="number" name="stock">
+            <input type="number" name="stock" required>
         </label>
         <br><br>
         <label>
             Price:
-            <input type="decimal" name="price">
+            <input type="decimal" name="price" required>
+        </label>
+        <br><br>
+        <label>
+            User ID:
+            <input type="number" name="id_user_1" required>
         </label>
         <br><br>
         <button type="submit" class="btn btn-success">
             Create
         </button><br><br>
-        <button class="btn btn-info"><a href="/car_sell" style="color: white; text-decoration:none">Cancel</a></button>
+        <button class="btn btn-secondary"><a href="/car_sell" style="color: white; text-decoration:none">Cancel</a></button>
     </form>
 </center>
 @endsection

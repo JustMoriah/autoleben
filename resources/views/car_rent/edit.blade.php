@@ -39,6 +39,11 @@
             <input type="decimal" name="price" value="{{$car_rent->price}}" required>
         </label>
         <br><br>
+        <label>
+            User ID:
+            <input type="number" name="price" value="{{$car_rent->id_user_1}}" required>
+        </label>
+        <br><br>
         <button type="submit" class="btn btn-info">
             Edit
         </button><br><br>

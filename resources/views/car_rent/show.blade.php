@@ -19,6 +19,7 @@ Rental Car #{{$car_rent->id}}
         <li><strong>Color: </strong>{{$car_rent->birthdate}}</li><br>
         <li><strong>Status: </strong>{{$car_rent->status}}</li><br>
         <li><strong>Price: </strong>${{$car_rent->price}}</li><br>
+        <li><strong>User ID: </strong>{{$car_rent->id_user_1}}</li>
     </ul>
     <a href="/car_rent">Return to index</a>
 </center>

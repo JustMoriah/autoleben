@@ -17,6 +17,7 @@
         <th>Color</th>
         <th>Status</th>
         <th>Price</th>
+        <th>User ID</th>
         <th>Show</th>
         <th>Edit</th>
         <th>Delete</th>
@@ -45,6 +46,9 @@
                 </td>
                 <td>
                     <h3>{{$car_rent->price}}</h3>
+                </td>
+                <td>
+                    <h3>{{$car_rent->id_user_1}}</h3>
                 </td>
                 <td>
                     <button class="btn btn-primary"><a href="/car_rent/{{$car_rent->id}}" style="color: white; text-decoration:none">Show</a></button>
