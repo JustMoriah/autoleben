@@ -49,10 +49,10 @@
             <input type="number" name="license_number" value="{{$user->license_number}}">
         </label>
         <br><br>
-        <button type="submit" class="btn btn-primary">
-            Edit User
+        <button type="submit" class="btn btn-info">
+            Edit
         </button><br><br>
-        <button class="btn btn-info"><a href="/user" style="color: white; text-decoration:none">Cancel</a></button>
+        <button class="btn btn-secondary"><a href="/user" style="color: white; text-decoration:none">Cancel</a></button>
     </form>
 </center>
 @endsection

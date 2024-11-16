@@ -4,11 +4,11 @@
 
 @section('content')
 @include('sweetalert::alert')
-    <h1>Users</h1>
+    <h1><strong>Users</strong></h1>
 
-    <a href="/user/create" class="btn btn-primary">New User</a>
+    <a href="/user/create" class="btn btn-success">New User</a>
     <br>
-    <table class="table table-striped">
+    <table class="table table-striped" style="width: 100%">
         <tr>
         <th>ID</th>
         <th>Username</th>
@@ -58,14 +58,14 @@
                     <button class="btn btn-primary"><a href="/user/{{$user->id}}" style="color: white; text-decoration:none">Show</a></button>
                 </td>
                 <td>
-                    <button class="btn btn-primary"><a href="/user/{{$user->id}}/edit" style="color: white; text-decoration:none">Edit</a></button>
+                    <button class="btn btn-info"><a href="/user/{{$user->id}}/edit" style="color: white; text-decoration:none">Edit</a></button>
                 </td>
                 <td>
                     <form action="/user/{{$user->id}}" method="post">
                         @csrf
                         @method('DELETE')
-                        <button type='submit' class="btn btn-primary">
-                                Delete User
+                        <button type='submit' class="btn btn-danger">
+                                Delete
                         </button>
                     </form>
                 </td>

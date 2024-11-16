@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title','Autoleben | Create User')
+@section('title','Autoleben | Add User')
 
 @section('content')
 <center>
     <br>
-    <h1><strong>Create User</strong></h1><br>
+    <h1><strong>Add New User</strong></h1><br>
     <form action="/user" method="post">
         @csrf
         <label>
@@ -48,10 +48,10 @@
             <input type="number" name="license_number" required>
         </label>
         <br><br>
-        <button type="submit" class="btn btn-primary">
-            Create User
+        <button type="submit" class="btn btn-success">
+            Add
         </button><br><br>
-        <button class="btn btn-info"><a href="/user" style="color: white; text-decoration:none">Cancel</a></button>
+        <button class="btn btn-secondary"><a href="/user" style="color: white; text-decoration:none">Cancel</a></button>
     </form>
 </center>
 @endsection

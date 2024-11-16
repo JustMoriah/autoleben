@@ -48,10 +48,10 @@
             <input type="number" name="id_user_1">
         </label>
         <br><br>
-        <button type="submit" class="btn btn-primary">
-            Add Address
+        <button type="submit" class="btn btn-success">
+            Add
         </button><br><br>
-        <button class="btn btn-info"><a href="/user_address" style="color: white; text-decoration:none">Cancel</a></button>
+        <button class="btn btn-secondary"><a href="/user_address" style="color: white; text-decoration:none">Cancel</a></button>
     </form>
 </center>
 @endsection

@@ -4,11 +4,11 @@
 
 @section('content')
 @include('sweetalert::alert')
-    <h1>User Addresses</h1>
+    <h1><strong>User Addresses</strong></h1>
 
-    <a href="/user_address/create" class="btn btn-primary">New Address</a>
+    <a href="/user_address/create" class="btn btn-success">New Address</a>
     <br>
-    <table class="table table-striped">
+    <table class="table table-striped" style="width: 100%">
         <tr>
         <th>ID</th>
         <th>Country</th>
@@ -58,14 +58,14 @@
                     <button class="btn btn-primary"><a href="/user_address/{{$user_address->id}}" style="color: white; text-decoration:none">Show</a></button>
                 </td>
                 <td>
-                    <button class="btn btn-primary"><a href="/user_address/{{$user_address->id}}/edit" style="color: white; text-decoration:none">Edit</a></button>
+                    <button class="btn btn-info"><a href="/user_address/{{$user_address->id}}/edit" style="color: white; text-decoration:none">Edit</a></button>
                 </td>
                 <td>
                     <form action="/user_address/{{$user_address->id}}" method="post">
                         @csrf
                         @method('DELETE')
-                        <button type='submit' class="btn btn-primary">
-                                Delete Address
+                        <button type='submit' class="btn btn-danger">
+                                Delete
                         </button>
                     </form>
                 </td>

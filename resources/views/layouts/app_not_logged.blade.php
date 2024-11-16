@@ -14,7 +14,7 @@
     <div class="crud">
         <table style="width:100%; background-image: linear-gradient(to right, darkblue, teal);;box-shadow: 0px 3px rgba(0,0,0,0.5)">
             <tr>
-                <td><h1 style="color:white"><strong>&nbsp;Autoleben</strong></h1></td>
+                <td><h1 style="color:white"><strong>&nbsp;<a href="/home" style="color: white; text-decoration:none">Autoleben</a></strong></h1></td>
                 <td style="width:70%">&nbsp;</td>
                 <td><button class="btn btn-primary"><a href="/login" style="color: white; text-decoration:none">Login</a></button></td>
                 <td><button class="btn btn-primary"><a href="/register" style="color: white; text-decoration:none">Sign Up</a></button></td>

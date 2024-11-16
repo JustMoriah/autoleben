@@ -5,7 +5,7 @@
 @section('content')
 <center>
     <br><br>
-    <h1><strong>Edit Rental Car</strong></h1><br>
+    <h1><strong>Edit Rental Car Listing</strong></h1><br>
     <form action="/car_rent/{{$car_rent->id}}" method="post">
         @csrf
         @method('PUT')
@@ -39,10 +39,10 @@
             <input type="decimal" name="price" value="{{$car_rent->price}}" required>
         </label>
         <br><br>
-        <button type="submit" class="btn btn-primary">
-            Edit Rental Car
+        <button type="submit" class="btn btn-info">
+            Edit
         </button><br><br>
-        <button class="btn btn-info"><a href="/car_rent" style="color: white; text-decoration:none">Cancel</a></button>
+        <button class="btn btn-secondary"><a href="/car_rent" style="color: white; text-decoration:none">Cancel</a></button>
     </form>
 </center>
 @endsection

@@ -5,7 +5,7 @@
 @section('content')
 <center>
     <br><br>
-    <h1><strong>Edit Car</strong></h1><br>
+    <h1><strong>Edit Car Listing</strong></h1><br>
     <form action="/car_sell/{{$car_sell->id}}" method="post">
         @csrf
         @method('PUT')
@@ -34,10 +34,10 @@
             <input type="decimal" name="price" value="{{$car_sell->price}}">
         </label>
         <br><br>
-        <button type="submit" class="btn btn-primary">
-            Edit sellal Car
+        <button type="submit" class="btn btn-info">
+            Edit
         </button><br><br>
-        <button class="btn btn-info"><a href="/car_sell" style="color: white; text-decoration:none">Cancel</a></button>
+        <button class="btn btn-secondary"><a href="/car_sell" style="color: white; text-decoration:none">Cancel</a></button>
     </form>
 </center>
 @endsection

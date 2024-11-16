@@ -14,7 +14,7 @@
     <div class="crud">
         <table style="width:100%; background-image: linear-gradient(to right, darkblue, teal);;box-shadow: 0px 3px rgba(0,0,0,0.5)">
             <tr>
-                <td><h1 style="color:white"><strong>&nbsp;Autoleben</strong></h1></td>
+                <td><h1 style="color:white"><strong>&nbsp;<a href="/home_admin" style="color: white; text-decoration:none">Autoleben</a></strong></h1></td>
                 <td style="width:80%">&nbsp;</td>
                 <td><button class="btn btn-primary"><a href="/logout" style="color: white; text-decoration:none">Log Out</a></button></td>
             </tr>

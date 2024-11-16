@@ -4,11 +4,11 @@
 
 @section('content')
 @include('sweetalert::alert')
-    <h1>Rent-a-Car</h1>
+    <h1><strong>Rent-a-Car</strong></h1>
 
-    <a href="/car_rent/create" class="btn btn-primary">New Rental Car</a>
+    <a href="/car_rent/create" class="btn btn-success">New Rental Car</a>
     <br>
-    <table class="table table-striped">
+    <table class="table table-striped" style="width: 100%">
         <tr>
         <th>ID</th>
         <th>License Plate</th>
@@ -50,14 +50,14 @@
                     <button class="btn btn-primary"><a href="/car_rent/{{$car_rent->id}}" style="color: white; text-decoration:none">Show</a></button>
                 </td>
                 <td>
-                    <button class="btn btn-primary"><a href="/car_rent/{{$car_rent->id}}/edit" style="color: white; text-decoration:none">Edit</a></button>
+                    <button class="btn btn-info"><a href="/car_rent/{{$car_rent->id}}/edit" style="color: white; text-decoration:none">Edit</a></button>
                 </td>
                 <td>
                     <form action="/car_rent/{{$car_rent->id}}" method="post">
                         @csrf
                         @method('DELETE')
-                        <button type='submit' class="btn btn-primary">
-                                Delete Rental Car
+                        <button type='submit' class="btn btn-danger">
+                                Delete
                         </button>
                     </form>
                 </td>
