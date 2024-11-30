@@ -6,7 +6,7 @@
 <center>
     <br>
     <h1><strong>Edit Address</strong></h1><br>
-    <form action="/user_address/{{$user_address->id}}" method="post">
+    <form action="/user_address/{{$user_address->id}}" method="post" id="user_address_form">
         @csrf
         @method('PUT')
         <label>
@@ -55,4 +55,25 @@
         <button class="btn btn-secondary"><a href="/user_address" style="color: white; text-decoration:none">Cancel</a></button>
     </form>
 </center>
+<script>
+    $(document).ready(function(){
+        alert("Ready");
+        $('#user_address_form').on('submit', function(event){
+            console.log(data)
+            var url = $(this).attr('action')
+            console.log(url)
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data; data,
+                success: function(response){
+                    console.log(response)
+                },
+                error: function(error){
+                    console.log(error)
+                }
+            })
+        });
+    });
+</script>
 @endsection

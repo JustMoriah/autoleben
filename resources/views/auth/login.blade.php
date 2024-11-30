@@ -14,7 +14,7 @@
                 @endforeach
             </ul>
         @endif
-        <form action="{{ route('login') }}" method="POST">
+        <form action="{{ route('login') }}" method="POST" id="login_form">
             @csrf
             <label for="username">Username:</label><br>
             <input type="text" name="username" id="username" required><br><br>
@@ -31,4 +31,25 @@
         <p>Don't have an account? <a href="/register">Create an account by clicking here.</a></p>
     </center>
 </div>
+<script>
+    $(document).ready(function(){
+        alert("Ready");
+        $('#login_form').on('submit', function(event){
+            console.log(data)
+            var url = $(this).attr('action')
+            console.log(url)
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data; data,
+                success: function(response){
+                    console.log(response)
+                },
+                error: function(error){
+                    console.log(error)
+                }
+            })
+        });
+    });
+</script>
 @endsection
